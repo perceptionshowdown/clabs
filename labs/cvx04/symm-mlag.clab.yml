@@ -4,64 +4,80 @@ topology:
   nodes:
     border01:
       kind: cvx
-      image: networkop/cx:4.3.0
+      image: networkop/cx:4.4.0
+      runtime: docker
       binds:
+      
       - evpn-mlag/border01/etc/network/interfaces:/etc/network/interfaces
       - evpn-mlag/border01/etc/frr/daemons:/etc/frr/daemons
       - evpn-mlag/border01/etc/frr/frr.conf:/etc/frr/frr.conf
 
     border02:
       kind: cvx
-      image: networkop/cx:4.3.0
+      image: networkop/cx:4.4.0
+      runtime: docker
       binds:
+      
       - evpn-mlag/border02/etc/network/interfaces:/etc/network/interfaces
       - evpn-mlag/border02/etc/frr/daemons:/etc/frr/daemons
       - evpn-mlag/border02/etc/frr/frr.conf:/etc/frr/frr.conf
 
     spine01:
       kind: cvx
-      image: networkop/cx:4.3.0
+      image: networkop/cx:4.4.0
+      runtime: docker
       binds:
+      
       - evpn-mlag/spine01/etc/network/interfaces:/etc/network/interfaces
       - evpn-mlag/spine01/etc/frr/daemons:/etc/frr/daemons
       - evpn-mlag/spine01/etc/frr/frr.conf:/etc/frr/frr.conf
 
     spine02:
       kind: cvx
-      image: networkop/cx:4.3.0
+      image: networkop/cx:4.4.0
+      runtime: docker
       binds:
+      
       - evpn-mlag/spine02/etc/network/interfaces:/etc/network/interfaces
       - evpn-mlag/spine02/etc/frr/daemons:/etc/frr/daemons
       - evpn-mlag/spine02/etc/frr/frr.conf:/etc/frr/frr.conf
 
     leaf01:
       kind: cvx
-      image: networkop/cx:4.3.0
+      image: networkop/cx:4.4.0
+      runtime: docker
       binds:
+      
       - evpn-mlag/leaf01/etc/network/interfaces:/etc/network/interfaces
       - evpn-mlag/leaf01/etc/frr/daemons:/etc/frr/daemons
       - evpn-mlag/leaf01/etc/frr/frr.conf:/etc/frr/frr.conf
 
     leaf02:
       kind: cvx
-      image: networkop/cx:4.3.0
+      image: networkop/cx:4.4.0
+      runtime: docker
       binds:
+      
       - evpn-mlag/leaf02/etc/network/interfaces:/etc/network/interfaces
       - evpn-mlag/leaf02/etc/frr/daemons:/etc/frr/daemons
       - evpn-mlag/leaf02/etc/frr/frr.conf:/etc/frr/frr.conf
 
     leaf03:
       kind: cvx
-      image: networkop/cx:4.3.0
+      image: networkop/cx:4.4.0
+      runtime: docker
       binds:
+      
       - evpn-mlag/leaf03/etc/network/interfaces:/etc/network/interfaces
       - evpn-mlag/leaf03/etc/frr/daemons:/etc/frr/daemons
       - evpn-mlag/leaf03/etc/frr/frr.conf:/etc/frr/frr.conf
 
     leaf04:
       kind: cvx
-      image: networkop/cx:4.3.0
+      image: networkop/cx:4.4.0
+      runtime: docker
       binds:
+      
       - evpn-mlag/leaf04/etc/network/interfaces:/etc/network/interfaces
       - evpn-mlag/leaf04/etc/frr/daemons:/etc/frr/daemons
       - evpn-mlag/leaf04/etc/frr/frr.conf:/etc/frr/frr.conf
