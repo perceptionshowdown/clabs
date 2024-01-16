@@ -1,5 +1,6 @@
 name: citc # Cumulus In The Cloud -- EVPN Multihoming Lab https://gitlab.com/cumulus-consulting/goldenturtle/cumulus_ansible_modules/-/tree/master/inventories/evpn_mh
 
+
 topology:
   nodes:
     border01:
@@ -11,6 +12,7 @@ topology:
       - evpn-mlag/border01/etc/network/interfaces:/etc/network/interfaces
       - evpn-mlag/border01/etc/frr/daemons:/etc/frr/daemons
       - evpn-mlag/border01/etc/frr/frr.conf:/etc/frr/frr.conf
+      mgmt-ipv4: 172.20.20.41
 
     border02:
       kind: cvx
@@ -21,6 +23,7 @@ topology:
       - evpn-mlag/border02/etc/network/interfaces:/etc/network/interfaces
       - evpn-mlag/border02/etc/frr/daemons:/etc/frr/daemons
       - evpn-mlag/border02/etc/frr/frr.conf:/etc/frr/frr.conf
+      mgmt-ipv4: 172.20.20.42
 
     spine01:
       kind: cvx
@@ -31,6 +34,7 @@ topology:
       - evpn-mlag/spine01/etc/network/interfaces:/etc/network/interfaces
       - evpn-mlag/spine01/etc/frr/daemons:/etc/frr/daemons
       - evpn-mlag/spine01/etc/frr/frr.conf:/etc/frr/frr.conf
+      mgmt-ipv4: 172.20.20.21
 
     spine02:
       kind: cvx
@@ -41,6 +45,8 @@ topology:
       - evpn-mlag/spine02/etc/network/interfaces:/etc/network/interfaces
       - evpn-mlag/spine02/etc/frr/daemons:/etc/frr/daemons
       - evpn-mlag/spine02/etc/frr/frr.conf:/etc/frr/frr.conf
+      mgmt-ipv4: 172.20.20.22
+      
 
     leaf01:
       kind: cvx
@@ -51,6 +57,7 @@ topology:
       - evpn-mlag/leaf01/etc/network/interfaces:/etc/network/interfaces
       - evpn-mlag/leaf01/etc/frr/daemons:/etc/frr/daemons
       - evpn-mlag/leaf01/etc/frr/frr.conf:/etc/frr/frr.conf
+      mgmt-ipv4: 172.20.20.11
 
     leaf02:
       kind: cvx
@@ -61,6 +68,8 @@ topology:
       - evpn-mlag/leaf02/etc/network/interfaces:/etc/network/interfaces
       - evpn-mlag/leaf02/etc/frr/daemons:/etc/frr/daemons
       - evpn-mlag/leaf02/etc/frr/frr.conf:/etc/frr/frr.conf
+      mgmt-ipv4: 172.20.20.12
+      
 
     leaf03:
       kind: cvx
@@ -71,6 +80,8 @@ topology:
       - evpn-mlag/leaf03/etc/network/interfaces:/etc/network/interfaces
       - evpn-mlag/leaf03/etc/frr/daemons:/etc/frr/daemons
       - evpn-mlag/leaf03/etc/frr/frr.conf:/etc/frr/frr.conf
+      mgmt-ipv4: 172.20.20.13
+      
 
     leaf04:
       kind: cvx
@@ -81,42 +92,56 @@ topology:
       - evpn-mlag/leaf04/etc/network/interfaces:/etc/network/interfaces
       - evpn-mlag/leaf04/etc/frr/daemons:/etc/frr/daemons
       - evpn-mlag/leaf04/etc/frr/frr.conf:/etc/frr/frr.conf
+      mgmt-ipv4: 172.20.20.14
+      
 
     server01:
       kind: linux
       image: networkop/host:ifreload
       binds:
       - evpn-mlag/server01/etc/network/interfaces:/etc/network/interfaces
+      mgmt-ipv4: 172.20.20.31
+      
 
     server02:
       kind: linux
       image: networkop/host:ifreload
       binds:
       - evpn-mlag/server02/etc/network/interfaces:/etc/network/interfaces
+      mgmt-ipv4: 172.20.20.32
+      
 
     server03:
       kind: linux
       image: networkop/host:ifreload
       binds:
       - evpn-mlag/server03/etc/network/interfaces:/etc/network/interfaces
+      mgmt-ipv4: 172.20.20.33
+      
 
     server04:
       kind: linux
       image: networkop/host:ifreload
       binds:
       - evpn-mlag/server04/etc/network/interfaces:/etc/network/interfaces
+      mgmt-ipv4: 172.20.20.34
+      
 
     server05:
       kind: linux
       image: networkop/host:ifreload
       binds:
       - evpn-mlag/server05/etc/network/interfaces:/etc/network/interfaces
+      mgmt-ipv4: 172.20.20.35
+      
 
     server06:
       kind: linux
       image: networkop/host:ifreload
       binds:
       - evpn-mlag/server06/etc/network/interfaces:/etc/network/interfaces
+      mgmt-ipv4: 172.20.20.36
+      
 
 
   links:
