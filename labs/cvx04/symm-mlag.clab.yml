@@ -12,7 +12,7 @@ topology:
       - evpn-mlag/border01/etc/network/interfaces:/etc/network/interfaces
       - evpn-mlag/border01/etc/frr/daemons:/etc/frr/daemons
       - evpn-mlag/border01/etc/frr/frr.conf:/etc/frr/frr.conf
-      mgmt-ipv4: 172.20.20.41
+      mgmt-ipv4: 172.20.20.63
 
     border02:
       kind: cvx
@@ -23,7 +23,7 @@ topology:
       - evpn-mlag/border02/etc/network/interfaces:/etc/network/interfaces
       - evpn-mlag/border02/etc/frr/daemons:/etc/frr/daemons
       - evpn-mlag/border02/etc/frr/frr.conf:/etc/frr/frr.conf
-      mgmt-ipv4: 172.20.20.42
+      mgmt-ipv4: 172.20.20.64
 
     spine01:
       kind: cvx
@@ -100,7 +100,7 @@ topology:
       image: networkop/host:ifreload
       binds:
       - evpn-mlag/server01/etc/network/interfaces:/etc/network/interfaces
-      mgmt-ipv4: 172.20.20.31
+      mgmt-ipv4: 172.20.20.101
       
 
     server02:
@@ -108,7 +108,7 @@ topology:
       image: networkop/host:ifreload
       binds:
       - evpn-mlag/server02/etc/network/interfaces:/etc/network/interfaces
-      mgmt-ipv4: 172.20.20.32
+      mgmt-ipv4: 172.20.20.102
       
 
     server03:
@@ -116,7 +116,7 @@ topology:
       image: networkop/host:ifreload
       binds:
       - evpn-mlag/server03/etc/network/interfaces:/etc/network/interfaces
-      mgmt-ipv4: 172.20.20.33
+      mgmt-ipv4: 172.20.20.103
       
 
     server04:
@@ -124,7 +124,7 @@ topology:
       image: networkop/host:ifreload
       binds:
       - evpn-mlag/server04/etc/network/interfaces:/etc/network/interfaces
-      mgmt-ipv4: 172.20.20.34
+      mgmt-ipv4: 172.20.20.104
       
 
     server05:
@@ -132,7 +132,7 @@ topology:
       image: networkop/host:ifreload
       binds:
       - evpn-mlag/server05/etc/network/interfaces:/etc/network/interfaces
-      mgmt-ipv4: 172.20.20.35
+      mgmt-ipv4: 172.20.20.105
       
 
     server06:
@@ -140,7 +140,7 @@ topology:
       image: networkop/host:ifreload
       binds:
       - evpn-mlag/server06/etc/network/interfaces:/etc/network/interfaces
-      mgmt-ipv4: 172.20.20.36
+      mgmt-ipv4: 172.20.20.106
       
 
 
